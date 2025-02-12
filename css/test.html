@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test na deprese</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Test na Deprese</h1>
+    </header>
+    <main>
+        <p>Здесь будет тест для определения уровня депрессии.</p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Podpora deprese</p>
+    </footer>
+    <h1>Тест на депрессию</h1>
+    <form id="depression-test">
+        <p>1. Как часто вы чувствуете себя уставшим или без энергии?</p>
+        <label><input type="radio" name="q1" value="1"> Никогда</label>
+        <label><input type="radio" name="q1" value="2"> Иногда</label>
+        <label><input type="radio" name="q1" value="3"> Часто</label>
+        <label><input type="radio" name="q1" value="4"> Постоянно</label>
+        
+        <p>2. Насколько часто вы чувствуете грусть?</p>
+        <label><input type="radio" name="q2" value="1"> Никогда</label>
+        <label><input type="radio" name="q2" value="2"> Иногда</label>
+        <label><input type="radio" name="q2" value="3"> Часто</label>
+        <label><input type="radio" name="q2" value="4"> Постоянно</label>
+        
+        <button type="button" onclick="calculateResult()">Узнать результат</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateResult() {
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            let score = 0;
+
+            answers.forEach(answer => {
+                score += parseInt(answer.value);
+            });
+
+            const resultDiv = document.getElementById('result');
+            if (score <= 4) {
+                resultDiv.textContent = "Ваше состояние в норме.";
+            } else if (score <= 8) {
+                resultDiv.textContent = "Вы испытываете лёгкие симптомы депрессии.";
+            } else {
+                resultDiv.textContent = "У вас признаки депрессии. Рекомендуется обратиться за консультацией к специалисту.";
+            }
+        }
+    </script>
+</body>
+</html>
