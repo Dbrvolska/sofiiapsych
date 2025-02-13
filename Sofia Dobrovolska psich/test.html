@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test na deprese</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="index.html"><i class="fa-solid fa-house"></i> Pomoc v nouzi</a></li>
+                <li><a href="test.html"><i class="fa-solid fa-hand-holding-heart"></i> Test na deprese</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Praktické rady</a></li>
+            </ul>
+        </nav>
+        <h1>Test na Deprese</h1>
+    </header>
+   
+    <h1>Test deprese</h1>
+    <form id="depression-test">
+        <p>1. Malý zájem nebo potěšení z věcí, které děláte?</p>
+        <label><input type="radio" name="q1" value="0"> Nikdy</label>
+        <label><input type="radio" name="q1" value="1"> Někdy</label>
+        <label><input type="radio" name="q1" value="2"> Často</label>
+        <label><input type="radio" name="q1" value="3"> Neustále</label>
+        
+        <p>2. Pocit, že jste na dně, pocit deprese nebo beznaděje?</p>
+        <label><input type="radio" name="q2" value="0"> Nikdy</label>
+        <label><input type="radio" name="q2" value="1"> Někdy</label>
+        <label><input type="radio" name="q2" value="2"> Často</label>
+        <label><input type="radio" name="q2" value="3"> Neustále</label>
+
+        <p>3. Potíže s usínáním, přerušovaným spánkem nebo s přílišným spaním?</p>
+        <label><input type="radio" name="q3" value="0"> Nikdy</label>
+        <label><input type="radio" name="q3" value="1"> Někdy</label>
+        <label><input type="radio" name="q3" value="2"> Často</label>
+        <label><input type="radio" name="q3" value="3"> Neustále</label>
+
+        <p>4. Pocit únavy nebo málo energie ?</p>
+        <label><input type="radio" name="q4" value="0"> Nikdy</label>
+        <label><input type="radio" name="q4" value="1"> Někdy</label>
+        <label><input type="radio" name="q4" value="2"> Často</label>
+        <label><input type="radio" name="q4" value="3"> Neustále</label>
+
+        <p>5. Malá chuť k jídlu nebo přejídání?</p>
+        <label><input type="radio" name="q5" value="0"> Nikdy</label>
+        <label><input type="radio" name="q5" value="1"> Někdy</label>
+        <label><input type="radio" name="q5" value="2"> Často</label>
+        <label><input type="radio" name="q5" value="3"> Neustále</label>
+
+        <p>6. Měl/a jste ze sebe špatný pocit – že se vám život nevydařil nebo že jste zklamal/a sám/sama sebe nebo svou rodinu?</p>
+        <label><input type="radio" name="q6" value="0"> Nikdy</label>
+        <label><input type="radio" name="q6" value="1"> Někdy</label>
+        <label><input type="radio" name="q6" value="2"> Často</label>
+        <label><input type="radio" name="q6" value="3"> Neustále</label>
+
+        <p>7. Potíže se soustředěním, např. při čtení novin nebo sledování televize?</p>
+        <label><input type="radio" name="q7" value="0"> Nikdy</label>
+        <label><input type="radio" name="q7" value="1"> Někdy</label>
+        <label><input type="radio" name="q7" value="2"> Často</label>
+        <label><input type="radio" name="q7" value="3"> Neustále</label>
+
+        <p>8. Myšlenky na to, že by vám bylo lépe, kdybyste nežil/nežila nebo si nějakým způsobem ublížil/a?</p>
+        <label><input type="radio" name="q8" value="0"> Nikdy</label>
+        <label><input type="radio" name="q8" value="1"> Někdy</label>
+        <label><input type="radio" name="q8" value="2"> Často</label>
+        <label><input type="radio" name="q8" value="3"> Neustále</label>
+
+        <p>9. Cítíte úzkost, napětí?</p>
+        <label><input type="radio" name="q9" value="0"> Nikdy</label>
+        <label><input type="radio" name="q9" value="1"> Někdy</label>
+        <label><input type="radio" name="q9" value="2"> Často</label>
+        <label><input type="radio" name="q9" value="3"> Neustále</label>
+
+        <p>10. Býváte smutní??</p>
+        <label><input type="radio" name="q10" value="0"> Nikdy</label>
+        <label><input type="radio" name="q10" value="1"> Někdy</label>
+        <label><input type="radio" name="q10" value="2"> Často</label>
+        <label><input type="radio" name="q10" value="3"> Neustále</label>
+        
+        <button type="button" onclick="calculateResult()">Zjistěte výsledek</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateResult() {
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            let score = 0;
+
+            answers.forEach(answer => {
+                score += parseInt(answer.value);
+            });
+
+            const resultDiv = document.getElementById('result');
+            if (score <= 4) {
+                resultDiv.textContent = "Váš stav je normální.";
+            } else if (score <= 10) {
+                resultDiv.textContent = "Pociťujete mírné příznaky deprese.";
+        
+            } 
+            else if (score <=20) {
+                resultDiv.textContent = "ýtiýýii";
+
+            }
+            else {
+                resultDiv.textContent = "Vykazujete známky deprese. Doporučuje se požádat o radu odborníka.";
+            }
+        }
+    </script>
+      <footer>
+        <p>&copy; 2025 Podpora deprese</p>
+    </footer>
+</body>
+</html>
