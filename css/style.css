@@ -1,0 +1,130 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: 
+    url('image/409277125_f09fd25d-e825-4e71-8933-aa5461fc7eda.jpg') no-repeat center center/cover;
+    color: #1B5E20;
+    text-align: center;
+}
+header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+.logo-container {
+    margin-left: -120px; /* Регулируйте значение для нужного сдвига */
+}
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+        }
+        .navbar ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #1B5E20;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a:hover {
+            color: #388E3C;
+            text-shadow: 0 0 15px rgba(56, 142, 60, 1);
+        }
+        .hero {
+            padding: 100px 20px 50px;
+            background: transparent;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature:hover {
+            transform: scale(1.07);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+        .support {
+            padding: 50px 20px;
+            background: rgba(200, 230, 201, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #2E7D32;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover {
+            background: #1B5E20;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+       
+            footer {
+                padding: 20px;
+                background: transparent;
+                color: white;
+                font-weight: bold;
+                text-align: left;
+            }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 3px 3px 10px rgba(0, 100, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 100, 0, 0.4);
+        }
