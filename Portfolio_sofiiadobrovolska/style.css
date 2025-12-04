@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #0a0a0a;
+  color: #e0f7ff;
+}
+
+header.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: #111;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #67e8f9;
+}
+
+.btn {
+  background: #67e8f9;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.avatar-container img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.about-text {
+  max-width: 400px;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #121212;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #67e8f9;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.work-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons i {
+  font-size: 30px;
+  color: #67e8f9;
+}
+
+footer {
+  background: #0a0a0a;
+  color: #888;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.signature {
+  font-family: 'UnifrakturCook', cursive;
+  color: #67e8f9;
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Sofiia">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">O mně</a></li>
+      <li><a href="index_prace.html">Práce</a></li>
+      <li><a class="active" href="contact.html"><button class="btn">Pojďme si promluvit</button></a></li>
+    </ul>
+  </nav>
+
+  <section id="contact">
+    <h2>Pojďme se spojit</h2>
+    <p class="motive-text">Máte nápad, projekt nebo otázku? Pošlete mi zprávu!</p>
+
+    <form action="https://formspree.io/f/mldbobva" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Vaše jméno (volitelné)">
+      <input type="email" name="email" placeholder="Váš e-mail" required>
+      <textarea name="message" rows="5" placeholder="Napište svou zprávu..." required></textarea>
+      <button type="submit" class="btn">Odeslat zprávu</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Děkuji za návštěvu mého portfolia</p>
+    <p class="signature">Vytvořeno v kódu & chaosu 🕯</p>
+  </footer>
+
+</body>
+</html>
